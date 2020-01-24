@@ -5,6 +5,8 @@ using UnityEngine;
 public class JumpingScript : MonoBehaviour
 {
     private bool isGrounded;
+    public float jumpPower = 5f;
+    public KeyCode jumpButton = KeyCode.Space;
     
     // Update is called once per frame
     void Update()
@@ -13,8 +15,9 @@ public class JumpingScript : MonoBehaviour
     }
 
     void Jump(){
-        if (Input.GetButtonDown("Jump") && isGrounded == true){
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+        if (Input.GetKeyDown(jumpButton) && isGrounded == true){
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+            print(1);
         }
     }
 
