@@ -1,1 +1,1 @@
-<h1>Unity Version Needed: 2018.3.10f1 or higher</h1>
+<h1>Unity Version Needed: 2019.2.17f1 or higherr</h1>
