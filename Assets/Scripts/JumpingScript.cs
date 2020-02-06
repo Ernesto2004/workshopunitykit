@@ -17,7 +17,6 @@ public class JumpingScript : MonoBehaviour
     void Jump(){
         if (Input.GetKeyDown(jumpButton) && isGrounded == true){
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
-            print(1);
         }
     }
 
