@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PhysicsScript : MonoBehaviour
 {
-    
+    public float Mass = 1;
+    public float Gravity = 1;
     void Start()
     {
 
@@ -13,6 +14,9 @@ public class PhysicsScript : MonoBehaviour
             sc.freezeRotation = true;
         }
         
+        sc.gravityScale = Gravity;
+        sc.mass = Mass;
+
         PolygonCollider2D pc2d = gameObject.AddComponent<PolygonCollider2D>() as PolygonCollider2D;
         pc2d.autoTiling = true;
     }
